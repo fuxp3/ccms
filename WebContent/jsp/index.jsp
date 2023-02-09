@@ -8,8 +8,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>服装购物商城</title>
-		<link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon/favicon.ico">
-		<link rel="Bookmark" href="${pageContext.request.contextPath}/img/icon/favicon.ico">
+		<%-- <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon/favicon.ico">
+		<link rel="Bookmark" href="${pageContext.request.contextPath}/img/icon/favicon.ico"> --%>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" type="text/css" />
 		<script src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js" type="text/javascript"></script>
 		<script src="${pageContext.request.contextPath}/js/bootstrap.min.js" type="text/javascript"></script>
@@ -22,7 +22,7 @@
 			<!--
             	描述：轮播条
             -->
-			<div class="container-fluid">
+			<%-- <div class="container-fluid">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
@@ -63,12 +63,12 @@
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
-			</div>
+			</div> --%>
 			<!--
 
             	描述：商品显示
             -->
-			<div class="container-fluid">
+			<%-- <div class="container-fluid">
 				<div class="col-md-12">
 					<h2>热门商品&nbsp;&nbsp;<img src="${pageContext.request.contextPath}/img/title2.jpg"/></h2>
 				</div>
@@ -91,15 +91,15 @@
 					</div>
 					</c:forEach>
 				</div>
-			</div>
+			</div> --%>
 			<!--
 
             	描述：广告部分
             -->
-            <p></p>
+            <!-- <p></p>
             <div class="container-fluid">
 				<img src="products/hao/ad.jpg" width="100%"/>
-			</div>
+			</div> -->
 			<!--
 
             	描述：商品显示
@@ -108,15 +108,15 @@
 				<div class="col-md-12">
 					<h2>最新商品&nbsp;&nbsp;<img src="${pageContext.request.contextPath}/img/title2.jpg"/></h2>
 				</div>
-				<div class="col-md-2" style="border:1px solid #E7E7E7;border-right:0;padding:0;">
+				<!-- <div class="col-md-2" style="border:1px solid #E7E7E7;border-right:0;padding:0;">
 					<img src="products/hao/big01.jpg" width="205" height="404" style="display: inline-block;"/>
-				</div>
+				</div> -->
 				<div class="col-md-10">
-					<div class="col-md-6" style="text-align:center;height:200px;padding:0px;">
+					<!-- <div class="col-md-6" style="text-align:center;height:200px;padding:0px;">
 						
 							<img src="products/hao/middle01.jpg" width="480px" height="200px" style="display: inline-block;">
 						
-					</div>
+					</div> -->
 				
 					<c:forEach items="${news }" var="p">
 					<div class="col-md-2" style="text-align:center;height:200px;padding:10px 0px;">

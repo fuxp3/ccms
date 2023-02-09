@@ -22,14 +22,14 @@
             	描述：菜单栏
             -->
 			<div class="container-fluid" >
-				<div class="col-md-4" >
+				<%-- <div class="col-md-4" >
 					<img src="${pageContext.request.contextPath}/img/logo5.png" style="height: 57px;width: 198px"/>
 				</div>
 				<div class="col-md-5">
 					<img src="${pageContext.request.contextPath}/img/header.png" />
-				</div>
+				</div> --%>
 				<input type="hidden" name="uid" value="${loginUser.uid }"/>
-				<div class="col-md-3" style="padding-top:20px">
+				<div class="col-md-12" style="padding-top:20px">
 					<ol class="list-inline">
 					  <c:if test="${empty loginUser}">
 						<li><a href="${pageContext.request.contextPath}/login"><div style="color: red">亲，请登录</div></a></li>
@@ -86,9 +86,9 @@
 							</ul>
 							<form action="${pageContext.request.contextPath}/findProductByKey?curPage=1" method="post"  class="navbar-form navbar-right" role="search">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Search" id="keyword" name="key">
+									<input type="text" class="form-control" placeholder="输入商品" id="keyword" name="key">
 								</div>
-								<button type="submit" class="btn btn-default">Submit</button>
+								<button type="submit" class="btn btn-default">搜索</button>
 							</form>
 
 						</div>

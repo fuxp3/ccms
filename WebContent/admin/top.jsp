@@ -29,17 +29,18 @@ TH {
 	<body>
 		<table width="100%" height="70%"  border="0" cellspacing="0" cellpadding="0">
 			<tr>
-				<td>
-					<img width="100%" src="${pageContext.request.contextPath}/img/admin/top_01.jpg">
+				<td style="background-color:#E6E6E6;">
+					<span style="font-size:35px;">服装公司管理系统后台</span>
+					<%-- <img width="100%" src="${pageContext.request.contextPath}/img/admin/top_01.jpg"> --%>
 				</td>
 
-				<td width="100%" background="${pageContext.request.contextPath}/img/admin/top_100.jpg">
-				</td>
+				<%-- <td width="100%" background="${pageContext.request.contextPath}/img/admin/top_100.jpg">
+				</td> --%>
 			</tr>
 		</table>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
-				<td height="30" valign="bottom" background="${pageContext.request.contextPath}/img/admin/mis_01.jpg">
+				<td height="30" valign="bottom" style="background-color:#E6E6E6;">
 					<table width="100%" border="0" cellspacing="0" cellpadding="0">
 						<tr>
 						<td width="85%" align="left">
@@ -76,21 +77,20 @@ TH {
 						<td width="15%">
 								<table width="100%" border="0" cellspacing="0" cellpadding="0">
 									<tr>
-										<td width="16"
+										<%-- <td width="16"
 											background="${pageContext.request.contextPath}/img/admin/mis_05b.jpg">
 											<img
 												src="${pageContext.request.contextPath}/img/admin/mis_05a.jpg"
 												width="6" height="18">
-										</td>
-										<td width="155" valign="bottom"
-											background="${pageContext.request.contextPath}/img/admin/mis_05b.jpg">
+										</td> --%>
+										<td width="155" valign="bottom">
 											用户名：
 											<font color="blue"><s:property value="#session.existAdminUser.username"/></font>
 										</td>
-										<td width="10" align="right"
+										<%-- <td width="10" align="right"
 											background="${pageContext.request.contextPath}/img/admin/mis_05b.jpg">
 											<img src="${pageContext.request.contextPath}/img/admin/mis_05c.jpg" width="6" height="18">
-										</td>
+										</td> --%>
 									</tr>
 								</table>
 							</td>

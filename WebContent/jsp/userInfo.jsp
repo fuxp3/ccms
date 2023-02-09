@@ -31,13 +31,14 @@
 			<%@ include file="/jsp/header.jsp"%>
 
 				<div class="container"
-			style="width:100%;background:url('${pageContext.request.contextPath}/img/regist_bg.jpg');">
+			style="width:100%;">
 			<div class="row">
 	
 				<div class="col-md-2"></div>
 	
 				<div class="col-md-8"
-					style="background: #fff; padding: 40px 80px; margin: 30px; border: 7px solid #ccc;">
+					style="background: #fff; padding: 40px 80px; margin: 30px;">
+					<div style="width:100%;height:100%;border-radius: 5px;border:1px solid gray;background: #fff;">
 					<font>会员个人信息</font>
 					<form class="form-horizontal" style="margin-top: 5px;"
 						action="${pageContext.request.contextPath}/modifyUser"
@@ -99,11 +100,11 @@
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
 								<input type="submit" width="100" value="保存" name="submit"
-									style="background: url('${pageContext.request.contextPath}/img/register.gif') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-					    height:35px;width:100px;color:white;" />
+									style="height:35px;width:100px;" />
 							</div>
 						</div>
 					</form>
+					</div>
 				</div>
 
 				<div class="col-md-2"></div>

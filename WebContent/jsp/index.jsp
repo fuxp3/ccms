@@ -106,12 +106,12 @@
             -->
 			<div class="container-fluid">
 				<div class="col-md-12">
-					<h2>最新商品&nbsp;&nbsp;<img src="${pageContext.request.contextPath}/img/title2.jpg"/></h2>
+					<h2>最新商品<%-- &nbsp;&nbsp;<img src="${pageContext.request.contextPath}/img/title2.jpg"/> --%></h2>
 				</div>
 				<!-- <div class="col-md-2" style="border:1px solid #E7E7E7;border-right:0;padding:0;">
 					<img src="products/hao/big01.jpg" width="205" height="404" style="display: inline-block;"/>
 				</div> -->
-				<div class="col-md-10">
+				<div class="col-md-12">
 					<!-- <div class="col-md-6" style="text-align:center;height:200px;padding:0px;">
 						
 							<img src="products/hao/middle01.jpg" width="480px" height="200px" style="display: inline-block;">

@@ -15,7 +15,7 @@
 	<table width="100%" border="0" cellspacing="0" cellpadding="10"
 		height="64">
 		<tr>
-			<td align="center" width="100%" style="" background="${pageContext.request.contextPath}/img/admin/bt_02.jpg">服装购商城管理平台&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+			<td align="center" width="100%" style="background-color:#E6E6E6;">服装公司管理系统&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
 				<font class="font12"> <a class="a03" target="_blank"
 					href="mailto:sarft@chinasarft.gov.cn"> </a></font></td>
 		</tr>

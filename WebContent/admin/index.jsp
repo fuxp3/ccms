@@ -18,7 +18,7 @@
         	<input class="text_value" value="" name="username" type="text" id="username">
             <input class="text_value" value="" name="password" type="password" id="password">
         </div>
-        <button class="button" id="submit" type="submit">登录</button>
+        <button class="button" id="submit" type="submit"></button>
     </div>
     
     </form>

@@ -37,7 +37,7 @@
 					</ul>
 				</div> --%>
 				<div style="text-align: center;margin-top: 5px;margin-bottom:20px;">
-					Copyright &copy; 服装商城 
+					Copyright &copy; 服装公司管理系统 
 				</div>
 			</div>
 	</body>

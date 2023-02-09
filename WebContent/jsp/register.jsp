@@ -6,8 +6,8 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>会员注册</title>
-<link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon/favicon.ico">
-<link rel="Bookmark" href="${pageContext.request.contextPath}/img/icon/favicon.ico">
+<%-- <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon/favicon.ico">
+<link rel="Bookmark" href="${pageContext.request.contextPath}/img/icon/favicon.ico"> --%>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/bootstrap.min.css"
 	type="text/css" />
@@ -49,16 +49,16 @@ font {
             	描述：菜单栏
             -->
 	<div class="container-fluid">
-		<div class="col-md-4">
+		<%-- <div class="col-md-4">
 			<img src="${pageContext.request.contextPath}/img/logo5.png"
 				style="height: 57px; width: 198px" />
 		</div>
 		<div class="col-md-5">
 			<img src="${pageContext.request.contextPath}/img/header.png" />
-		</div>
-		<div class="col-md-3" style="padding-top: 20px">
+		</div> --%>
+		<div class="col-md-12" style="padding-top: 20px">
 			<ol class="list-inline">
-				<li><a href="${pageContext.request.contextPath}/login"><div style="color: red">亲，请登录</div></a></li>
+				<li><a href="${pageContext.request.contextPath}/login"><div style="color: red">请登录</div></a></li>
 				<li><a href="${pageContext.request.contextPath}/register">免费注册</a></li>
 				<li><a href="${pageContext.request.contextPath}/">返回首页</a></li>
 				<%-- <li><a href="${pageContext.request.contextPath}/jsp/cart.jsp">购物车</a></li>
@@ -69,15 +69,16 @@ font {
 
 
 	<div class="container"
-		style="width:100%;background:url('${pageContext.request.contextPath}/img/regist_bg.jpg');">
+		style="width:100%;">
 		<div class="row">
 
 			<div class="col-md-2"></div>
 
 
 			<div class="col-md-8"
-				style="background: #fff; padding: 40px 80px; margin: 30px; border: 7px solid #ccc;">
-				<font>会员注册</font>USER REGISTER
+				style="background: #fff; padding: 40px 80px; margin: 30px;">
+				<div style="width:100%;height:100%;border-radius: 5px;border:1px solid gray;background: #fff;">
+				<font>会员注册</font><!-- USER REGISTER -->
 				<form class="form-horizontal" style="margin-top: 5px;"
 					action="${pageContext.request.contextPath}/userRegister"
 					method="post" enctype="multipart/form-data">
@@ -127,12 +128,12 @@ font {
 							</label>
 						</div>
 					</div>
-					<div class="form-group">
+					<!-- <div class="form-group">
 						<label for="date" class="col-sm-2 control-label">用户头像</label>
 						<div class="col-sm-6">
 							<input type="file" name="photo" class="form-control">
 						</div>
-					</div>
+					</div> -->
 					<div class="form-group">
 						<label for="date" class="col-sm-2 control-label">出生日期</label>
 						<div class="col-sm-6">
@@ -150,11 +151,11 @@ font {
 					<div class="form-group">
 						<div class="col-sm-offset-2 col-sm-10">
 							<input type="submit" width="100" value="注册" name="submit"
-								style="background: url('${pageContext.request.contextPath}/img/register.gif') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-				    height:35px;width:100px;color:white;" />
+								style="height:35px;width:100px;" />
 						</div>
 					</div>
-				</form>
+					</form>
+				</div>
 			</div>
 
 			<div class="col-md-2"></div>

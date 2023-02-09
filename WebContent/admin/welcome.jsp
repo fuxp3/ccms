@@ -23,9 +23,9 @@ BODY {SCROLLBAR-FACE-COLOR: #cccccc; SCROLLBAR-HIGHLIGHT-COLOR: #ffffFF; SCROLLB
 </style>
 </head>
 
-<body>
+<body style = "background: url('${pageContext.request.contextPath}/img/admin/back_end_bj.jpg');background-size: 100% 100%;">
 
-<form name="Form1" method="post" action="name.aspx" id="Form1">
+<%-- <form name="Form1" method="post" action="name.aspx" id="Form1">
 
 	<table width="100%" border="0" height="88" border="1" background="${pageContext.request.contextPath}/img/admin/back1.JPG">
 		<tr>
@@ -41,7 +41,7 @@ BODY {SCROLLBAR-FACE-COLOR: #cccccc; SCROLLBAR-HIGHLIGHT-COLOR: #ffffFF; SCROLLB
 	
 	</table>
 
-	</form>
+	</form> --%>
 
 </body>
 

@@ -21,13 +21,13 @@
     <td>
 <div class="dtree">
 
-	<a href="javascript: d.openAll();">展开所有</a> | <a href="javascript: d.closeAll();">关闭所有</a>
+	<!-- <a href="javascript: d.openAll();">展开所有</a> | <a href="javascript: d.closeAll();">关闭所有</a> -->
 	
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/dtree.js"></script>
 	<script type="text/javascript">
 	     <!--
 		d = new dTree('d');
-		d.add('01',-1,'系统菜单树');
+		d.add('01',-1,'系统功能菜单');
 		
 		d.add('0102','01','分类管理','','','mainFrame');
 		//param1: 当前节点id
@@ -49,6 +49,9 @@
 		d.add('010503','0105','已付款订单','${pageContext.request.contextPath}/findOrders?state=2','','mainFrame');
 		d.add('010504','0105','已发货的订单','${pageContext.request.contextPath}/findOrders?state=3','','mainFrame');
 		d.add('010505','0105','已完成的订单','${pageContext.request.contextPath}/findOrders?state=4','','mainFrame');
+		
+		d.add('0106','01','用户管理');
+		d.add('010601','0106','用户管理','${pageContext.request.contextPath}/users','','mainFrame');
 		
 		//d.add('0106','01','用户管理');
 		//d.add('010601','0106','VIP','','','mainFrame');

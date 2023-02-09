@@ -6,7 +6,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>商品详情信息</title>
-	<link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon/favicon.ico">
+	<%-- <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon/favicon.ico"> --%>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" type="text/css" />
 	<script src="${pageContext.request.contextPath}/js/jquery-1.12.0.min.js" type="text/javascript"></script>
 	<script src="${pageContext.request.contextPath}/js/bootstrap.min.js" type="text/javascript"></script>
@@ -35,10 +35,10 @@
 	<%@ include file="/jsp/header.jsp"%>
 	<div class="container">
 		<div class="row">
-			<div style="border: 1px solid #e4e4e4;width:930px;margin-bottom:10px;margin:0 auto;padding:10px;margin-bottom:10px;">
+			<%-- <div style="border: 1px solid #e4e4e4;width:930px;margin-bottom:10px;margin:0 auto;padding:10px;margin-bottom:10px;">
 				<a href="${pageContext.request.contextPath}/">首页&nbsp;&nbsp;&gt;</a>
 				<a>${product.pname }</a>
-			</div>
+			</div> --%>
 			<div style="margin:0 auto;width:950px;">
 				<form id="myForm" action="${pageContext.request.contextPath}/addCartItemToCart" method="post">
 				<div class="col-md-6">
@@ -64,7 +64,7 @@
 							<!-- 取消链接的默认行为 -->
 							<a href="javascript:void(0)">
 								<input id="btnId" type="submit" style="background: url('${pageContext.request.contextPath}/img/product.gif') no-repeat scroll 0 -600px rgba(0, 0, 0, 0);height:36px;width:130px;" value="加入购物车">
-							</a> &nbsp;<a href="javascript:;">收藏商品</a>
+							</a> &nbsp;<!-- <a href="javascript:;">收藏商品</a> -->
 						</div>
 					</div>
 				</div>
@@ -88,7 +88,7 @@
 				</div>
 
 
-				<div style="background-color:#d3d3d3;width:900px;">
+				<%-- <div style="background-color:#d3d3d3;width:900px;">
 					<table class="table table-bordered">
 						<tbody>
 							<tr class="active">
@@ -184,7 +184,7 @@
 							</tr>
 						</tbody>
 					</table>
-				</div>
+				</div> --%>
 				
 			</div>
 		</div>

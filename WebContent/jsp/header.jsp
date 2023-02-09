@@ -32,13 +32,13 @@
 				<div class="col-md-12" style="padding-top:20px">
 					<ol class="list-inline">
 					  <c:if test="${empty loginUser}">
-						<li><a href="${pageContext.request.contextPath}/login"><div style="color: red">亲，请登录</div></a></li>
+						<li><a href="${pageContext.request.contextPath}/login"><div style="color: red">请登录</div></a></li>
 						<li><a href="${pageContext.request.contextPath}/register">免费注册</a></li>
 					  </c:if>
 					  
 					  <c:if test="${not empty loginUser}">
 					  	<li><a href="${pageContext.request.contextPath}/modifyUserPhotojsp">
-					  		<img alt="#" src="${pageContext.request.contextPath}/${loginUser.photo }" class="img-circle" height="30" width="30"/></a>
+					  		<%-- <img alt="#" src="${pageContext.request.contextPath}/${loginUser.photo }" class="img-circle" height="30" width="30"/> --%></a>
 					  	</li>
 					  	
 						<li class="dropdown">
@@ -64,7 +64,7 @@
             	描述：导航条
             -->
 			<div class="container-fluid">
-				<nav class="navbar navbar-inverse">
+				<nav class="navbar navbar-inverse" style="background:gray;border-color:white;">
 					<div class="container-fluid">
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
@@ -76,7 +76,6 @@
 							</button>
 							<a class="navbar-brand" href="${pageContext.request.contextPath}/">首页</a>
 						</div>
-
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav" id="cates">
@@ -84,7 +83,7 @@
 										<li><a href="#">${cate.cname }</a></li>
 									</c:forEach>   --%>
 							</ul>
-							<form action="${pageContext.request.contextPath}/findProductByKey?curPage=1" method="post"  class="navbar-form navbar-right" role="search">
+							<form action="${pageContext.request.contextPath}/findProductByKey?curPage=1" method="post"  class="navbar-form navbar-left" role="search">
 								<div class="form-group">
 									<input type="text" class="form-control" placeholder="输入商品" id="keyword" name="key">
 								</div>

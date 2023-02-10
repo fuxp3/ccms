@@ -8,8 +8,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>购物车</title>
-		<link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon/favicon.ico">
-		<link rel="Bookmark" href="${pageContext.request.contextPath}/img/icon/favicon.ico">		
+		<%-- <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/icon/favicon.ico">
+		<link rel="Bookmark" href="${pageContext.request.contextPath}/img/icon/favicon.ico"> --%>		
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css" type="text/css" />
 		<script src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js" type="text/javascript"></script>
 		<script src="${pageContext.request.contextPath}/js/bootstrap.min.js" type="text/javascript"></script>
@@ -59,7 +59,7 @@
 					<strong style="font-size:16px;margin:5px 0;">购物详情</strong>
 					<table class="table table-bordered">
 						<tbody>
-							<tr class="warning">
+							<tr>
 								<th>图片</th>
 								<th>商品</th>
 								<th>价格</th>
@@ -68,10 +68,10 @@
 								<th>操作</th>
 							</tr>
 							<c:forEach items="${cart.cartItems }" var="item">
-							<tr class="active">
+							<tr>
 								<td width="60" width="40%">
 									<input type="hidden" name="id" value="22">
-									<img src="${pageContext.request.contextPath}/${item.product.pimage}" width="70" height="60">
+									<img src="${item.product.pimage}" width="70" height="60">
 								</td>
 								<td width="30%">
 									<a target="_blank">${item.product.pname}</a>
@@ -100,15 +100,14 @@
 			<div style="margin-right:130px;">
 				<div style="text-align:right;">
 					<em style="color:#ff6600;">
-				登录后确认是否享有优惠&nbsp;&nbsp;
-			</em> 赠送积分: <em style="color:#ff6600;">${cart.total }</em>&nbsp; 商品金额: <strong style="color:#ff6600;">￥${cart.total }元</strong>
+				<!-- 登录后确认是否享有优惠 -->&nbsp;&nbsp;
+			</em> <%-- 赠送积分: <em style="color:#ff6600;">${cart.total }</em>&nbsp; --%> 商品金额: <strong style="color:#ff6600;">￥${cart.total }元</strong>
 				</div>
 				<div style="text-align:right;margin-top:10px;margin-bottom:10px;">
 					<a href="${pageContext.request.contextPath}/ClearCart" id="clear" class="clear">清空购物车</a>
 					<a href="${pageContext.request.contextPath}/saveOrder">
 						<%--提交表单 --%>
-						<input type="submit" width="100" value="提交订单" name="submit" border="0" style="background: url('${pageContext.request.contextPath}/img/register.gif') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-						height:35px;width:100px;color:white;">
+						<input type="submit" width="100" value="提交订单" name="submit" border="0" style="height:35px;width:100px;">
 					</a>
 				</div>
 			</div>

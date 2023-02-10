@@ -68,7 +68,7 @@
 											</td>
 											<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 												width="17%">
-												<img width="40" height="45" src="${ pageContext.request.contextPath }/${p.pimage}">
+												<img width="40" height="45" src="${p.pimage}">
 											</td>
 											<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 												width="17%">

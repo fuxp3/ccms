@@ -192,10 +192,11 @@ public class ProductController {
 					// 文件的名字
 					//D:\tomcat\tomcat71_sz07\webapps\store_v5\products\3
 					//String realPath=request.getSession().getServletContext().getRealPath("/products/3/");
-					String  realPath="D:/eclipseWorkspace2/ShoppingMall/WebContent/products/3/";
-					String path = realPath + pimage.getOriginalFilename();
+					String realPath="D:/File/images/products/";
+					String fileName = System.currentTimeMillis() + "."+ pimage.getOriginalFilename().split("\\.")[1];
+					String path = realPath + fileName;
 					System.out.println(path);
-					product.setPimage("products/3/"+pimage.getOriginalFilename());
+					product.setPimage("http://localhost:8080/Clothingstore/image/products/"+fileName);
 					// 上传路径
 					File localFile = new File(path);
 					if (!localFile.exists()) {
@@ -244,10 +245,12 @@ public class ProductController {
 					// 文件的名字
 					// D:\tomcat\tomcat71_sz07\webapps\store_v5\products\3
 					// String realPath=request.getSession().getServletContext().getRealPath("/products/3/");
-					String realPath = "D:/eclipseWorkspace2/ShoppingMall/WebContent/products/3/";
-					String path = realPath + pimage.getOriginalFilename();
+					String realPath = "D:/File/images/products/";
+					String fileName = System.currentTimeMillis() + "."+ pimage.getOriginalFilename().split("\\.")[1];
+					String path = realPath + fileName;
 					System.out.println(path);
-					product.setPimage("products/3/" + pimage.getOriginalFilename());
+					//product.setPimage("products/3/" + pimage.getOriginalFilename());
+					product.setPimage("http://localhost:8080/Clothingstore/image/products/"+fileName);
 					// 上传路径
 					File localFile = new File(path);
 					if (!localFile.exists()) {

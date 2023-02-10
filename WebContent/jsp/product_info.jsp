@@ -42,7 +42,7 @@
 			<div style="margin:0 auto;width:950px;">
 				<form id="myForm" action="${pageContext.request.contextPath}/addCartItemToCart" method="post">
 				<div class="col-md-6">
-					<img style="opacity: 1;width:400px;height:350px;" title="" class="medium" src="${pageContext.request.contextPath}/${product.pimage}">
+					<img style="opacity: 1;width:400px;height:350px;" title="" class="medium" src="${product.pimage}">
 				</div>
 				<div class="col-md-6">
 					<div><strong>${product.pname }</strong></div>
@@ -51,7 +51,7 @@
 					</div>
 					<div style="margin:10px 0 10px 0;">商城价: <strong style="color:#ef0101;">￥：${product.shopPrice }元/份</strong> 市场价： <del>￥：${product.marketPrice }元/份</del>
 					</div>
-					<div style="margin:10px 0 10px 0;">促销: <a target="_blank" title="限时抢购 (2014-07-30 ~ 2015-01-01)" style="background-color: #f07373;">限时抢购</a> </div>
+					<!-- <div style="margin:10px 0 10px 0;">促销: <a target="_blank" title="限时抢购 (2014-07-30 ~ 2015-01-01)" style="background-color: #f07373;">限时抢购</a> </div> -->
 					<div style="padding:20px;border:1px solid #e7dbb1;width:330px;margin:20px 0 10px 0;;background-color: #fffee6;">
 						<div style="margin:10px 0 20px 0;">${product.pname }</div>
 						<div style="border-bottom: 1px solid #faeac7;margin-top:20px;padding-left: 10px;">购买数量:
@@ -62,8 +62,8 @@
 						<div style="margin:20px 0 10px 0;;text-align: center;">
 							<%--加入到购物车 --%>
 							<!-- 取消链接的默认行为 -->
-							<a href="javascript:void(0)">
-								<input id="btnId" type="submit" style="background: url('${pageContext.request.contextPath}/img/product.gif') no-repeat scroll 0 -600px rgba(0, 0, 0, 0);height:36px;width:130px;" value="加入购物车">
+							<a href="javascript:void(0)" style="text-decoration: none;">
+								<input id="btnId" type="submit" style="height:36px;width:130px;" value="加入购物车">
 							</a> &nbsp;<!-- <a href="javascript:;">收藏商品</a> -->
 						</div>
 					</div>

@@ -128,12 +128,12 @@ font {
 							</label>
 						</div>
 					</div>
-					<!-- <div class="form-group">
+					<div class="form-group">
 						<label for="date" class="col-sm-2 control-label">用户头像</label>
 						<div class="col-sm-6">
 							<input type="file" name="photo" class="form-control">
 						</div>
-					</div> -->
+					</div>
 					<div class="form-group">
 						<label for="date" class="col-sm-2 control-label">出生日期</label>
 						<div class="col-sm-6">

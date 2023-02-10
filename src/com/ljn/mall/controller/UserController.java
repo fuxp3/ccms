@@ -96,9 +96,10 @@ public class UserController {
 			while (iter.hasNext()) {
 				photo = multiRequest.getFile((String)iter.next());
 				if (photo != null) {
-					String realPath="D:/eclipseWorkspace2/ShoppingMall/WebContent/userPhoto/";
-					String path = realPath + photo.getOriginalFilename();
-					user.setPhoto("userPhoto/"+photo.getOriginalFilename());
+					String realPath="D:/File/images/userPhoto/";
+					String fileName = System.currentTimeMillis() + "."+ photo.getOriginalFilename().split("\\.")[1];
+					String path = realPath + fileName;
+					user.setPhoto("http://localhost:8080/Clothingstore/image/userPhoto/"+fileName);
 					File localFile= new File(path);
 					if (!localFile.exists()) {
 						localFile.mkdirs();
@@ -110,21 +111,24 @@ public class UserController {
 		//工具类 拿到用户数据        
 		MyBeanUtils.populate(user, map);
 		user.setUid(UUIDUtils.getId());
-		user.setState(0);
+		user.setState(1);
 		user.setCode(UUIDUtils.getCode());
 		System.out.println(user);
 		try {
 			//System.out.println(user);
 			userService.insert(user);
-			request.setAttribute("msg", "用户注册成功，请激活！");
+			request.setAttribute("msg", "用户注册成功！");
 			//注册成功，向用户发送邮箱信息，跳转到提示页面
 			MailUtils.sendMail(user.getEmail(), user.getCode());
 		} catch (Exception e) {
 			//e.getMessage()
-			request.setAttribute("msg","用户注册成功，请通过管理员后台激活登录！");
+			request.setAttribute("msg","用户注册成功！");
 			//注册失败，跳转到提示页面
 		}
-		return "info";
+		//return "info";
+		//重定向到商城首页
+		//return "redirect:/index.jsp";
+		return "login";
 	}
 	
 	/**

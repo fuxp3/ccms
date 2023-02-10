@@ -38,7 +38,7 @@
 					  
 					  <c:if test="${not empty loginUser}">
 					  	<li><a href="${pageContext.request.contextPath}/modifyUserPhotojsp">
-					  		<%-- <img alt="#" src="${pageContext.request.contextPath}/${loginUser.photo }" class="img-circle" height="30" width="30"/> --%></a>
+					  		<img alt="#" src="${loginUser.photo }" class="img-circle" height="30" width="30"/></a>
 					  	</li>
 					  	
 						<li class="dropdown">

@@ -139,6 +139,30 @@ public class OrderController {
 		return "order_list";
 	}
 
+	@RequestMapping("/mockPayOrder")
+	public String mockPayOrder(@RequestParam("oid") String oid, @RequestParam("address") String address,
+						   @RequestParam("name") String name, @RequestParam("telephone") String telephone,
+						   @RequestParam("pd_FrpId") String pd_FrpId) {
+		// 获取订单oid,收货人地址,姓名,电话,银行
+		// 更新订单上收货人的地址,姓名,电话
+		Orders order = orderService.findOrderByOid(oid);
+		order.setName(name);
+		order.setTelephone(telephone);
+		order.setAddress(address);
+		orderService.updateOrder(order);
+		// 向易宝支付发送参数
+		// 把付款所需要的参数准备好:
+		// 金额
+		// order.getTotal()
+		// 接受响应参数的Servlet
+		String p8_Url = "/mockCallback?oid="+oid+"&total="+order.getTotal();
+
+		// 使用重定向：
+		// resp.sendRedirect(sb.toString());
+		//return "redirect:" + sb.toString();
+		return "redirect:" + p8_Url;
+	}
+
 	@RequestMapping("/payOrder")
 	public String payOrder(@RequestParam("oid") String oid, @RequestParam("address") String address,
 			@RequestParam("name") String name, @RequestParam("telephone") String telephone,
@@ -196,6 +220,18 @@ public class OrderController {
 		// 使用重定向：
 		// resp.sendRedirect(sb.toString());
 		return "redirect:" + sb.toString();
+	}
+
+	@RequestMapping("/mockCallback")
+	public String mockCallback(@RequestParam("oid") String oid,@RequestParam("total") String total, Model model,HttpServletResponse response) {
+		// 模拟支付成功,更新订单状态
+		Orders order = orderService.findOrderByOid(oid);
+		order.setState(2);
+		orderService.updateOrder(order);
+		// 向model放入提示信息
+		model.addAttribute("msg", "支付成功！订单号：" + oid + "金额：" + total);
+		// 转发到/jsp/info.jsp
+		return "info";
 	}
 
 	@RequestMapping("/callBack")
@@ -283,4 +319,14 @@ public class OrderController {
 		orderService.updateOrder(orders);
 		return "redirect:/findOrders?state=3";
 	}
+
+	@RequestMapping("/sign")
+	public String sign(@RequestParam("oid") String oid) {
+		Orders orders=orderService.findOrderByOid(oid);
+		orders.setState(4);
+		orderService.updateOrder(orders);
+		return "redirect:/findMyOrderWithPage?curPage=1";
+	}
+
+
 }

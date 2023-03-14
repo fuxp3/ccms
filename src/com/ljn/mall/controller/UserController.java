@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.ljn.mall.domain.Orders;
 import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -39,7 +41,19 @@ public class UserController {
 	@Autowired
 	IUserService userService;
 
-	
+	@RequestMapping("/findUsers")
+	public String findUsers(HttpServletRequest request,Model model){
+		List<User> list=userService.selectAll();
+		model.addAttribute("users", list);
+		return "forward:/admin/user/list.jsp";
+	}
+
+	@RequestMapping("/userAdmin_delete")
+	public String userAdmin_delete(@RequestParam("uid") String uid,HttpServletRequest request,Model model){
+		userService.deleteById(uid);
+		return "redirect:/findUsers";
+	}
+
 	@RequestMapping("/checkImg")
 	@ResponseBody
 	public String checkImg(Model model,HttpServletRequest request,HttpServletResponse response) throws IOException {

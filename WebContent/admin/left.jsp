@@ -50,8 +50,8 @@
 		d.add('010504','0105','已发货的订单','${pageContext.request.contextPath}/findOrders?state=3','','mainFrame');
 		d.add('010505','0105','已完成的订单','${pageContext.request.contextPath}/findOrders?state=4','','mainFrame');
 		
-		//d.add('0106','01','用户管理');
-		//d.add('010601','0106','用户管理','${pageContext.request.contextPath}/users','','mainFrame');
+		d.add('0106','01','用户管理');
+		d.add('010601','0106','用户管理','${pageContext.request.contextPath}/findUsers','','mainFrame');
 		
 		//d.add('0106','01','用户管理');
 		//d.add('010601','0106','VIP','','','mainFrame');

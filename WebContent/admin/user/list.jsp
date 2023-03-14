@@ -1,12 +1,15 @@
-<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <HTML>
-	<HEAD>
-		<meta http-equiv="Content-Language" content="zh-cn">
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<link href="${pageContext.request.contextPath}/css/Style1.css" rel="stylesheet" type="text/css" />
-		<script language="javascript" src="${pageContext.request.contextPath}/js/public.js"></script>
-		
-	</HEAD>
+<HEAD>
+	<meta http-equiv="Content-Language" content="zh-cn">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="${pageContext.request.contextPath}/css/Style1.css" rel="stylesheet" type="text/css" />
+	<script language="javascript" src="${pageContext.request.contextPath}/js/public.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.11.3.min.js"></script>
+</HEAD>
 	<body>
 		<br>
 		<form id="Form1" name="Form1" action="${pageContext.request.contextPath}/user/list.jsp" method="post">
@@ -37,55 +40,49 @@
 									<td align="center" width="17%">
 										真实姓名
 									</td>
-									<td width="7%" align="center">
+									<%--<td width="7%" align="center">
 										编辑
-									</td>
+									</td>--%>
 									<td width="7%" align="center">
 										删除
 									</td>
 								</tr>
-									<s:iterator var="u" value="pageBean.list" status="status">
+									<c:forEach var="u" items="${users}" varStatus="status">
+
 										<tr onmouseover="this.style.backgroundColor = 'white'"
 											onmouseout="this.style.backgroundColor = '#F5FAFE';">
 											<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 												width="18%">
-												<s:property value="#status.count"/>
+												${status.count}
 											</td>
 											<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 												width="17%">
-												<s:property value="#u.username"/>
+												${u.username}
 											</td>
 											<td style="CURSOR: hand; HEIGHT: 22px" align="center"
 												width="17%">
-												<s:property value="#u.name"/>
+												${u.name}
 											</td>
-											<td align="center" style="HEIGHT: 22px">
-												<a href="${ pageContext.request.contextPath }/userAdmin_edit.action?uid=<s:property value="#u.uid"/>">
+											<%--<td align="center" style="HEIGHT: 22px">
+												<a href="${ pageContext.request.contextPath }/userAdmin_edit.action?uid=${u.uid}/>">
 													<img src="${pageContext.request.contextPath}/images/i_edit.gif" border="0" style="CURSOR: hand">
 												</a>
-											</td>
+											</td>--%>
 									
 											<td align="center" style="HEIGHT: 22px">
-												<a href="${ pageContext.request.contextPath }/userAdmin_delete.action?uid=<s:property value="#u.uid"/>">
-													<img src="${pageContext.request.contextPath}/images/i_del.gif" width="16" height="16" border="0" style="CURSOR: hand">
+												<a href="${ pageContext.request.contextPath }/userAdmin_delete.action?uid=${u.uid}">
+													<%--<img src="${pageContext.request.contextPath}/images/i_del.gif" width="16" height="16" border="0" style="CURSOR: hand">--%>
+													删除
 												</a>
 											</td>
 										</tr>
-									</s:iterator>	
+									</c:forEach>
 							</table>
 						</td>
 					</tr>
 					<tr align="center">
 						<td colspan="7">
-							第<s:property value="pageBean.page"/>/<s:property value="pageBean.totalPage"/>页 
-							<s:if test="pageBean.page != 1">
-								<a href="${ pageContext.request.contextPath }/userAdmin_findAll.action?page=1">首页</a>|
-								<a href="${ pageContext.request.contextPath }/userAdmin_findAll.action?page=<s:property value="pageBean.page-1"/>">上一页</a>|
-							</s:if>
-							<s:if test="pageBean.page != pageBean.totalPage">
-								<a href="${ pageContext.request.contextPath }/userAdmin_findAll.action?page=<s:property value="pageBean.page+1"/>">下一页</a>|
-								<a href="${ pageContext.request.contextPath }/userAdmin_findAll.action?page=<s:property value="pageBean.totalPage"/>">尾页</a>|
-							</s:if>
+
 						</td>
 					</tr>
 				</TBODY>

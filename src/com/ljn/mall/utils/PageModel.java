@@ -1,4 +1,4 @@
-﻿package com.ljn.mall.utils;
+package com.ljn.mall.utils;
 
 
 import java.util.List;

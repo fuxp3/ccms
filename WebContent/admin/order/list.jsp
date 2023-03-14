@@ -92,9 +92,9 @@
 											</td>
 											<td align="center" style="HEIGHT: 22px" width="60%">
 												<input type="button" value="订单详情" id="${o.oid}" class="myClass"/>
-												<!-- <table border="1" width="100%">
+												<table border="1" width="100%">
 												   
-												</table> -->
+												</table>
 											</td>
 										</tr>
 										</c:forEach>
@@ -126,7 +126,7 @@
 		var $tb=$(this).next();
 		if(txt=="订单详情"){
 			//向服务端发送Ajax请求,将当前的订单id传递到服务端
-			var url="http://localhost:8080/ShoppingMall/findOrderByOidWithAjax";
+			var url="http://localhost:8080/Clothingstore/findOrderByOidWithAjax";
 			var object={"id":id};
 			$.post(url,object,function(data){
 				//console.log(data);
@@ -138,7 +138,7 @@
 				//利用JQUERY遍历响应到客户端的数据  
 				$.each(data,function(i,obj){
 					console.log(obj);
-					var td="<tr><td><img src='/ShoppingMall/"+obj.product.pimage+"' width='50px'/></td><td>"+obj.product.pname+"</td><td>"+obj.product.shopPrice+"</td><td>"+obj.quantity+"</td></tr>";
+					var td="<tr><td><img src='"+obj.product.pimage+"' width='50px'/></td><td>"+obj.product.pname+"</td><td>"+obj.product.shopPrice+"</td><td>"+obj.quantity+"</td></tr>";
 					$tb.append(td);				
 				})
 			},"json");

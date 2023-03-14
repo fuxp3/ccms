@@ -58,7 +58,7 @@
 									</c:if>	 
 									<c:if test="${o.state==2}">未发货</c:if>
 									<c:if test="${o.state==3}">
-										<a href="">签收</a>
+										<a href="${pageContext.request.contextPath}/sign?oid=${o.oid}">签收</a>
 									</c:if>	 
 									<c:if test="${o.state==4}">结束</c:if>
 									<a href="${pageContext.request.contextPath}/deleteOrderByoid?oid=${o.oid}&curPage=1" class="cancelOrder">取消订单</a>	 

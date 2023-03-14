@@ -84,8 +84,8 @@ TH {
 												width="6" height="18">
 										</td> --%>
 										<td width="155" valign="bottom">
-											用户名：
-											<font color="blue"><s:property value="#session.existAdminUser.username"/></font>
+											<%--用户名：
+											<font color="blue"><s:property value="#session.existAdminUser.username"/></font>--%>
 										</td>
 										<%-- <td width="10" align="right"
 											background="${pageContext.request.contextPath}/img/admin/mis_05b.jpg">

@@ -22,7 +22,7 @@
 			<!--
             	描述：轮播条
             -->
-			<%-- <div class="container-fluid">
+			<div class="container-fluid">
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
@@ -63,7 +63,7 @@
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
-			</div> --%>
+			</div>
 			<!--
 
             	描述：商品显示

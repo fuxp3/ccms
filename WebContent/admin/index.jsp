@@ -7,10 +7,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link href="${pageContext.request.contextPath}/css/base.css" rel="stylesheet" type="text/css">
 <link href="${pageContext.request.contextPath}/css/login.css" rel="stylesheet" type="text/css">
-
+<script>
+    window.location.href = '${pageContext.request.contextPath}/admin/home.jsp';
+</script>
 </head>
 <body>
-	<div class="login">
+	<%--<div class="login">
 <form action="${pageContext.request.contextPath}/admin/home.jsp" method="post" id="form">
 	<div class="logo"></div>
     <div class="login_form">
@@ -22,6 +24,6 @@
     </div>
     
     </form>
-</div>
+</div>--%>
 </body>
 </html>
